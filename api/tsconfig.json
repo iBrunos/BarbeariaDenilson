@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "types": [
+          "node",
+          "mongodb"
+        ],
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "target": "es6",
+      "outDir": "dist"
+    },
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
+  
