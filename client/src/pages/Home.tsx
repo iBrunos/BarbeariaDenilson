@@ -31,7 +31,7 @@ function Home() {
 
   return (
     <>
-    {usePageTitle("Genious World")}
+    {usePageTitle("Genious")}
       <Header />
       <main className='mt-4 py-20'>
         <HeroHome/>

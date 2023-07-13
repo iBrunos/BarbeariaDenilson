@@ -7,7 +7,7 @@ function Profile() {
 
   return (
     <>
-    {usePageTitle("Genious World | Perfil")}
+    {usePageTitle("Perfil | Perfil")}
       <Header />
       <main className='mt-4 py-20'>
       <ProfileCard />

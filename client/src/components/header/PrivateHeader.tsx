@@ -272,9 +272,9 @@ const Header: React.FC = () => {
                   Produtos
                 </Link>
                 <Link
-                  to="/user/pets"
+                  to="/user/companies"
                   className={`lg:text-lg text-base px-3 py-2 text-gray-800 dark:text-white lg:border-[#3a3a3a] hover:font-semibold lg:hover:border-b-2 lg:border-b-0 border-b lg:hover:bg-white hover:bg-[#f5f5f5] lg:dark:hover:bg-[#3a3a3a] hover:dark:bg-[#2a2a2a] dark:hover:text-white lg:dark:border-white dark:border-[#2a2a2a] border-[#f5f5f5] lg:mr-2 mr-0 flex ${isActive(
-                    "/user/pets"
+                    "/user/companies"
                   )}`}
                 >
                   <MdOutlineHomeRepairService className="mt-1 mr-2 lg:text-xl text-lg"></MdOutlineHomeRepairService>Minha Empresa
