@@ -4,4 +4,4 @@ Disallow: /login
 Disallow: /signIn
 Disallow: /buscar
 
-Sitemap: https://vodooworld.vercel.app/sitemap.xml
+Sitemap: https://Geniousworld.vercel.app/sitemap.xml

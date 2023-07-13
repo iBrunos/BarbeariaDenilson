@@ -3,7 +3,7 @@ const SignPetsTable = () => {
     <section className="bg-white dark:bg-[#313131] pt-24 pb-[22%] pr-10 flex flex-col ">
       <section className="max-w-4xl pt-6 mx-auto bg-white rounded-md  dark:bg-[#313131]">
         <h2 className="text-lg font-semibold text-gray-700 capitalize dark:text-white">
-          Adicione um Pet
+         Cadastre sua empresa
         </h2>
 
         <form>
@@ -23,63 +23,68 @@ const SignPetsTable = () => {
               />
             </div>
 
-            <div>
+            <div className="w-[10.8rem]">
               <label
                 className="text-gray-700 dark:text-gray-200"
                 htmlFor="emailAddress"
               >
-                Nascimento
+                CNPJ
               </label>
               <input
                 id="emailAddress"
-                type="date"
+                type="number"
                 className="block w-full px-1 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-[#313131] dark:text-gray-300 dark:border-gray-100 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                placeholder="00.000.0000/0001-00"
               />
             </div>
 
-            <div>
+            <div className="ml-10 w-[8rem]">
               <label
                 className="text-gray-700 dark:text-gray-200"
                 htmlFor="password"
               >
-                Espécie
+                Redes Socias
               </label>
               <select name="cars" id="cars" className="block w-full px-4 py-2.5 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-[#313131] dark:text-gray-300 dark:border-gray-100 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-                <option value="volvo">Cachorro</option>
-                <option value="saab">Gato</option>
-                <option value="opel">Coelho</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Tiktok">Tiktok</option>
               </select>
             </div>
-
-            <div>
+     
+            <div className="ml-10 w-[8rem]">
               <label
                 className="text-gray-700 dark:text-gray-200"
                 htmlFor="passwordConfirmation"
               >
-                Raça
+                Estado
               </label>
               <input
                 id="passwordConfirmation"
                 type="text"
                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-[#313131] dark:text-gray-300 dark:border-gray-100 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
-                placeholder="Raça"
+                placeholder="Estado"
               />
             </div>
 
-            <div>
+         
+            <div className="ml-10 w-[8rem]">
               <label
                 className="text-gray-700 dark:text-gray-200"
                 htmlFor="passwordConfirmation"
               >
-                Gênero
+                Cidade
               </label>
-              <select name="cars" id="cars" className="block w-full px-4 py-2.5 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-[#313131] dark:text-gray-300 dark:border-gray-100 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-                <option value="volvo">Macho</option>
-                <option value="saab">Fêmea</option>
-              </select>
+              <input
+                id="passwordConfirmation"
+                type="text"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-[#313131] dark:text-gray-300 dark:border-gray-100 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                placeholder="Cidade"
+              />
             </div>
 
-            <div>
+         
+            <div className="ml-10 w-[8rem]">
               <button className="px-8 py-2.5 mt-8 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
                 Salvar
               </button>
@@ -109,7 +114,7 @@ const SignPetsTable = () => {
                         className="px-12 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
                       >
                         <button className="flex items-center gap-x-2">
-                          <span>Idade</span>
+                          <span>CNPJ</span>
                         </button>
                       </th>
 
@@ -118,7 +123,7 @@ const SignPetsTable = () => {
                         className="px-3 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
                       >
                         <button className="flex items-center gap-x-2">
-                          <span>Espécie</span>
+                          <span>Redes Socias</span>
                         </button>
                       </th>
 
@@ -126,14 +131,14 @@ const SignPetsTable = () => {
                         scope="col"
                         className="px-9 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
                       >
-                        Raça
+                        Estado
                       </th>
 
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
                       >
-                        Gênero
+                        Cidade
                       </th>
 
                       <th
@@ -154,19 +159,19 @@ const SignPetsTable = () => {
                   <tbody className="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-[#2a2a2a]">
                     <tr>
                       <td className="px-10 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-                        Eline Silveira
+                       Archei Software
                       </td>
                       <td className="px-12 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-                        2 Anos
+                       00.000.0000/000.00
                       </td>
                       <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-                        Gato
+                        Instagram, Facebook
                       </td>
                       <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-                        Gato Siâmes
+                       Bahia
                       </td>
                       <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-                        Fêmea
+                       Salvador
                       </td>
                       <td className="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
                         <div className="inline-flex items-center gap-x-3">
@@ -178,10 +183,10 @@ const SignPetsTable = () => {
                             />
                             <div>
                               <h2 className="font-medium text-gray-800 dark:text-white ">
-                                Arthur Melo
+                                Bruno Seixas
                               </h2>
                               <p className="text-sm font-normal text-gray-600 dark:text-gray-400">
-                                authurmelo@gmail.com
+                                seixasbru@gmail.com
                               </p>
                             </div>
                           </div>

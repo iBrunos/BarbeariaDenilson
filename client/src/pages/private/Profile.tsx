@@ -7,7 +7,7 @@ function Profile() {
 
   return (
     <>
-    {usePageTitle("Vodoo World | Perfil")}
+    {usePageTitle("Genious World | Perfil")}
       <Header />
       <main className='mt-4 py-20'>
       <ProfileCard />

@@ -6,7 +6,7 @@ import usePageTitle from '../hooks/UsePageTitle';
 const SignUp: React.FC = () => {
   return (
     <>
-      {usePageTitle("Cadastro | Vodoo World")}
+      {usePageTitle("Cadastro | Genious World")}
         <Header/>
         <main className=''><SignUpForm /></main>
         <Footer/>

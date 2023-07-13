@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import image from "../../assets/imgs/image0.jpg";
+import image from "../../assets/imgs/signUp.jpg";
 import avatar from "../../assets/imgs/avatar.png";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
@@ -21,9 +21,11 @@ const SignUpForm = () => {
   const [cellphone, setCellphone] = useState("");
   const [error, setError] = useState("");
   const [profileImage, setProfileImage] = useState<File | null>(null);
+  const [imageUrl, setImageUrl] = useState<string | null>(null);
 
- const API_URL = "https://api-vodooworld.vercel.app/auth/signup";
- // const API_URL = "http://localhost:3000/auth/signup";
+
+  const API_URL = "http://localhost:3000/auth/signup";
+
 
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newPassword = event.target.value;
@@ -52,11 +54,16 @@ const SignUpForm = () => {
     if (files && files.length > 0) {
       const file = files[0];
       setProfileImage(file);
+
+      const imageUrl = URL.createObjectURL(file);
+      setImageUrl(imageUrl);
     } else {
       setProfileImage(null);
+      setImageUrl(null);
     }
   };
-  
+
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -119,21 +126,23 @@ const SignUpForm = () => {
           <div className="w-full">
             <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2">
               <div className="w-[10rem] mt-[2rem] h-auto mr-0 pl-0 pt-0 pb-0 lg:block hidden">
-                {profileImage && (
+                {imageUrl && (
                   <img
                     className="object-cover w-[10rem] h-[10rem] rounded-full"
-                    src={profileImage}
+                    src={imageUrl}
                     alt="Imagem"
                   />
                 )}
-                {!profileImage && (
+                {!imageUrl && (
                   <img
                     className="object-cover w-[10rem] h-[10rem] rounded-full"
                     src={avatar}
                     alt="Imagem"
                   />
                 )}
+
               </div>
+              
               <div className="mt-28">
                 <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
                   Nome completo
@@ -146,6 +155,23 @@ const SignUpForm = () => {
                   required
                 />
               </div>
+              <div>
+                <label
+                  htmlFor="image"
+                  className="block text-sm text-gray-500 dark:text-gray-300 "
+                >
+                  Foto de Perfil
+                </label>
+
+                <input
+                  type="file"
+                  accept="image/*"
+                  id="meuArquivo"
+                  onChange={handleProfileImageChange}
+                  className="block w-full px-3 py-2 mt-2 text-sm text-gray-600 bg-white border border-gray-200 rounded-lg file:bg-gray-200 file:text-gray-700 file:text-sm file:px-4 file:py-1 file:cursor-pointer file:border-none file:rounded-full placeholder-gray-400/70 dark:placeholder-gray-500 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+                />
+              </div>
+
 
               <div>
                 <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
@@ -159,19 +185,6 @@ const SignUpForm = () => {
                   required
                 />
               </div>
-
-              <div>
-                <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
-                  Número para contato
-                </label>
-                <input
-                  type="tel"
-                  placeholder="(+55) 71 XXXXX-XXXX"
-                  className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg  dark:bg-white  dark:border-gray-700 focus:border-[#111111] dark:focus:border-[#111111] focus:ring-[#111111] focus:outline-none focus:ring focus:ring-opacity-40"
-                  onChange={(event) => setCellphone(event.target.value)}
-                />
-              </div>
-
               <div>
                 <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
                   Email
@@ -182,6 +195,18 @@ const SignUpForm = () => {
                   className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg  dark:bg-white  dark:border-gray-700 focus:border-[#111111] dark:focus:border-[#111111] focus:ring-[#111111] focus:outline-none focus:ring focus:ring-opacity-40"
                   onChange={(event) => setEmail(event.target.value)}
                   required
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
+                  Número para contato
+                </label>
+                <input
+                  type="tel"
+                  placeholder="(+55) 71 XXXXX-XXXX"
+                  className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg  dark:bg-white  dark:border-gray-700 focus:border-[#111111] dark:focus:border-[#111111] focus:ring-[#111111] focus:outline-none focus:ring focus:ring-opacity-40"
+                  onChange={(event) => setCellphone(event.target.value)}
                 />
               </div>
 
@@ -208,23 +233,6 @@ const SignUpForm = () => {
                   className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:bg-white dark:border-gray-700 focus:border-[#111111] dark:focus:border-[#111111] focus:ring-[#111111] focus:outline-none focus:ring focus:ring-opacity-40"
                   onChange={handleConfirmPasswordChange}
                   required
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="image"
-                  className="block text-sm text-gray-500 dark:text-gray-300 "
-                >
-                  Foto de Perfil
-                </label>
-
-                <input
-                  type="file"
-                  accept="image/*"
-                  id="meuArquivo"
-                  onChange={handleProfileImageChange}
-                  className="block w-full px-3 py-2 mt-2 text-sm text-gray-600 bg-white border border-gray-200 rounded-lg file:bg-gray-200 file:text-gray-700 file:text-sm file:px-4 file:py-1 file:cursor-pointer file:border-none file:rounded-full placeholder-gray-400/70 dark:placeholder-gray-500 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
                 />
               </div>
 

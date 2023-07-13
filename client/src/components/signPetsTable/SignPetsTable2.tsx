@@ -41,7 +41,7 @@ const SignPetsTable = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post("https://api-vodooworld.vercel.app/auth/signup", {
+      await axios.post("http://localhost:3000/auth/signup", {
         username,
         email,
         password,

@@ -11,7 +11,7 @@ function ProfileCard() {
     const userIcon = userId;
     const navigate = useNavigate();
     
-    const API_URL = "https://api-vodooworld.vercel.app/auth";
+    const API_URL = "http://localhost:3000/auth";
 
     useEffect(() => {
       const fetchUser = async () => {

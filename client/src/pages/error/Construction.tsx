@@ -5,7 +5,7 @@ import usePageTitle from "../../hooks/UsePageTitle";
 const Construction = () => {
   return (
     <>
-      {usePageTitle("Interditado | Vodoo World")}
+      {usePageTitle("Interditado | Genious World")}
       <Header />
       <main className="flex flex-col justify-center items-center pt-[18rem] pb-[18rem] h-full">
         <h1 className="lg:text-6xl text-3xl font-bold mb-4 dark:text-white">👷‍♂️ Página em obra! 🚧 🐈‍⬛</h1>

@@ -32,7 +32,7 @@ function Map() {
                   Nosso Email para contato.
                 </p>
                 <p className="mt-2 lg:text-sm text-xs text-[#313131] dark:text-yellow-400">
-                  vodooworld@gmail.com
+                  genious@gmail.com
                 </p>
               </div>
 

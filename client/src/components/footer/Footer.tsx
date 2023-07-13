@@ -1,5 +1,5 @@
-import logoWhite from "./../../assets/imgs/logoMinWhite.jpg";
-import logoBlack from "./../../assets/imgs/logoMinBlack.jpg";
+import logoWhite from "./../../assets/imgs/logo.png";
+import logoBlack from "./../../assets/imgs/logo.png";
 
 const Footer: React.FC = () => {
   return (
@@ -7,11 +7,11 @@ const Footer: React.FC = () => {
     <footer className="text-gray-600 body-font border-t-[0.08rem] border-gray-200 dark:border-[#0000002e] bg-white dark:bg-[#3a3a3a] relative bottom-0 w-full pb-24">
     <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
       <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-      <img src={logoWhite} alt="Logo da Vodoo World" className="w-24 mb-5 block dark:hidden" />
-      <img src={logoBlack} alt="Logo da Vodoo World" className="w-24 mb-5 hidden dark:block" />
+      <img src={logoWhite} alt="Logo da Genious World" className="w-24 mb-5 block dark:hidden" />
+      <img src={logoBlack} alt="Logo da Genious World" className="w-24 mb-5 hidden dark:block" />
       </a>
-      <p className="text-sm text-gray-500 dark:text-gray-300 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2023 Vodoo World - Todos os direitos reservados -
-        <a href="https://twitter.com/archeisoftware" className="text-gray-600 ml-1 dark:text-gray-400" rel="noopener noreferrer" target="_blank">@VodooWorld</a>
+      <p className="text-sm text-gray-500 dark:text-gray-300 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2023 Genious Edição - Todos os direitos reservados -
+        <a href="https://twitter.com/archeisoftware" className="text-gray-600 ml-1 dark:text-gray-400" rel="noopener noreferrer" target="_blank">@Genious</a>
       </p>
       <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
         <a className="text-gray-500">

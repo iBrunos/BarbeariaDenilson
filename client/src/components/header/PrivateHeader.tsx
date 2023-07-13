@@ -6,9 +6,9 @@ import { BsCalendarPlus } from "react-icons/bs";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { BiUserCircle } from "react-icons/bi";
 import { AiOutlineHome } from "react-icons/ai";
-import { MdPets } from "react-icons/md";
-import logoWhite from "./../../assets/imgs/logoWhite.jpg";
-import logoBlack from "./../../assets/imgs/logoBlack.jpg";
+import { MdOutlineHomeRepairService } from "react-icons/md";
+import logoWhite from "./../../assets/imgs/logo.png";
+import logoBlack from "./../../assets/imgs/logo.png";
 import axios, { AxiosRequestConfig } from "axios";
 import jwtDecode from "jwt-decode";
 import Cookies from 'js-cookie';
@@ -21,7 +21,6 @@ const Header: React.FC = () => {
   const [profileImage, setProfileImage] = useState("");
 
 
-  const userIcon = userId;
   const navigate = useNavigate();
 
   const toggleMenu = () => {
@@ -33,7 +32,7 @@ const Header: React.FC = () => {
     Cookies.remove("_Usr_tk_");
   };
 
-  const API_URL = "https://api-vodooworld.vercel.app/auth";
+  const API_URL = "http://localhost:3000/auth";
 
   useEffect(() => {
     const hasCC = localStorage.getItem('CC');
@@ -160,12 +159,12 @@ const Header: React.FC = () => {
               <img
                 className="w-24 h-auto dark:hidden"
                 src={logoWhite}
-                alt="Logo da Vodoo World"
+                alt="Logo da Genious World"
               />
               <img
                 className="w-24 h-auto hidden dark:block"
                 src={logoBlack}
-                alt="Logo da Vodoo World"
+                alt="Logo da Genious World"
               />
             </Link>
 
@@ -278,8 +277,8 @@ const Header: React.FC = () => {
                     "/user/pets"
                   )}`}
                 >
-                  <MdPets className="mt-1 mr-2 lg:text-xl text-lg"></MdPets>Meus
-                  Pets
+                  <MdOutlineHomeRepairService className="mt-1 mr-2 lg:text-xl text-lg"></MdOutlineHomeRepairService>Minha Empresa
+                  
                 </Link>
                 <Link
                   to="/user/perfil"

@@ -6,7 +6,7 @@ import usePageTitle from '../../hooks/UsePageTitle';
 const Pets: React.FC = () => {
   return (
     <>
-      {usePageTitle("Meus Pets | Vodoo World")}
+      {usePageTitle("Meus Pets | Genious World")}
         <Header/>
         <main className=''><SignPetsTable /></main>
         <Footer/>

@@ -7,7 +7,7 @@ const Error404 = () => {
   return (
     <>
     <Header></Header>
-      {usePageTitle("Erro 404 | Vodoo World")}
+      {usePageTitle("Erro 404 | Genious World")}
       <main className="flex flex-col justify-center items-center lg:pt-[20%] pt-[40%] lg:pb-[15rem] pb-[20%]">
         <h1 className="lg:text-6xl text-3xl font-bold mb-4 dark:text-white flex"><FcHighPriority className="mr-2"></FcHighPriority> ERRO 404</h1>
         <p className="text-xl mb-4 dark:text-white text-center">

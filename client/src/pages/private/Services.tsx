@@ -6,7 +6,7 @@ function Services() {
 
   return (
     <>
-    {usePageTitle("Vodoo World | Serviços")}
+    {usePageTitle("Genious World | Serviços")}
       <Header />
       <main className='mt-4 py-20'>
         

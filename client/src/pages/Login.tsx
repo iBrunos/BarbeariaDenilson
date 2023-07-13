@@ -6,7 +6,7 @@ import usePageTitle from '../hooks/UsePageTitle';
 const Login: React.FC = () => {
   return (
     <>
-      {usePageTitle("Login | Vodoo World")}
+      {usePageTitle("Login | Genious World")}
         <Header/>
         <main className='mt-12 mb-12 py-[3.75rem]'><LoginForm/></main>
         <Footer/>

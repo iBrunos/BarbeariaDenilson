@@ -9,11 +9,11 @@ function Home() {
 
   return (
     <>
-    {usePageTitle("Vodoo World")}
+    {usePageTitle("Genious World")}
       <Header />
       <main className='mt-4 py-20'>
         <HeroHome/>
-        <CarouselSlider />
+
         <Map />
       </main>
       <Footer />

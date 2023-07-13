@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { FiSun, FiMoon } from "react-icons/fi";
-import logoWhite from "./../../assets/imgs/logoWhite.jpg";
-import logoBlack from "./../../assets/imgs/logoBlack.jpg";
+import logoWhite from "./../../assets/imgs/logo.png";
+import logoBlack from "./../../assets/imgs/logo.png";
 import { FiLogIn } from "react-icons/fi";
 import { HiUserPlus } from "react-icons/hi2";
 import jwt_decode from "jwt-decode";
@@ -88,8 +88,8 @@ const Header: React.FC = () => {
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="flex items-center justify-between">
             <Link to="/home" className="flex items-center justify-between">
-              <img className="w-24 h-auto dark:hidden" src={logoWhite} alt="Logo da Vodoo World" />
-              <img className="w-24 h-auto hidden dark:block" src={logoBlack} alt="Logo da Vodoo World" />
+              <img className="w-24 h-auto dark:hidden" src={logoWhite} alt="Logo da Genious World" />
+              <img className="w-24 h-auto hidden dark:block" src={logoBlack} alt="Logo da Genious World" />
             </Link>
 
             {/* Mobile menu button */}
