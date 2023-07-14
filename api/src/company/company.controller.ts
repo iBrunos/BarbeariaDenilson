@@ -27,7 +27,7 @@ export class CompanyController {
   async signUp(
     @Body()
     signUpDto: SignUpDto,
-  ): Promise<{ token: string }> {
+  ): Promise<{ message: string }> {
     return this.Companieservice.signUp(signUpDto);
   }
 

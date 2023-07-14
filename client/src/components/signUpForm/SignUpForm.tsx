@@ -17,15 +17,13 @@ const SignUpForm = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [fullname, setFullname] = useState("");
-  const [permission, setPermission] = useState("");
+  const [permission] = useState("");
   const [cellphone, setCellphone] = useState("");
   const [error, setError] = useState("");
   const [profileImage, setProfileImage] = useState<File | null>(null);
   const [imageUrl, setImageUrl] = useState<string | null>(null);
 
-
   const API_URL = "http://localhost:3000/auth/signup";
-
 
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newPassword = event.target.value;
@@ -83,7 +81,9 @@ const SignUpForm = () => {
 
       };
       const formData = new FormData();
-      formData.append("profileImage", profileImage); // Add the image file to the form data
+      if (profileImage !== null) {
+        formData.append("profileImage", profileImage);
+      }
       formData.append("username", newItem.username);
       formData.append("fullname", newItem.fullname);
       formData.append("email", newItem.email);

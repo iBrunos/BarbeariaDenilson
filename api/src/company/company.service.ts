@@ -5,7 +5,7 @@ import {
 } from '@nestjs/common';
 import { Types } from 'mongoose';
 import * as mongoose from 'mongoose';
-import { Company} from './schemas/company.schemas';
+import { Company } from './schemas/company.schemas';
 import { InjectModel } from '@nestjs/mongoose';
 import { Query } from 'express-serve-static-core';
 import { JwtService } from '@nestjs/jwt';
@@ -17,7 +17,7 @@ export class CompaniesService {
     @InjectModel(Company.name)
     private companyModel: mongoose.Model<Company>,
     private jwtService: JwtService,
-  ) {}
+  ) { }
 
   async findAll(query: Query): Promise<Company[]> {
     const resPerPage = 10;
@@ -26,11 +26,11 @@ export class CompaniesService {
 
     const keyword = query.keyword
       ? {
-          name: {
-            $regex: query.keyword,
-            $options: 'i',
-          },
-        }
+        name: {
+          $regex: query.keyword,
+          $options: 'i',
+        },
+      }
       : {};
 
     const Companies = await this.companyModel
@@ -40,8 +40,8 @@ export class CompaniesService {
     return Companies;
   }
 
-  async signUp(signUpDto: SignUpDto): Promise<{ token: string }> {
-    const { name, cnpj, social_network, cep, state, city,ownerId, ownerName } = signUpDto;
+  async signUp(signUpDto: SignUpDto): Promise<{ message: string }> {
+    const { name, cnpj, social_network, cep, state, city, ownerId, ownerName } = signUpDto;
 
     const company = await this.companyModel.create({
       name,
@@ -54,11 +54,11 @@ export class CompaniesService {
       ownerName,
     });
 
-    const token = '...';
+    const message = 'Company created successfully.';
 
     this.jwtService.sign({ id: company._id });
 
-    return { token };
+    return {message};
   }
 
   async findById(id: Types.ObjectId): Promise<Company> {
