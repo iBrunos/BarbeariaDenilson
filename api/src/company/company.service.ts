@@ -84,7 +84,17 @@ export class CompaniesService {
     });
   }
 
-  async deleteById(id: mongoose.Types.ObjectId): Promise<Company> {
-    return await this.companyModel.findByIdAndDelete(id);
+  async deleteById(id: mongoose.Types.ObjectId): Promise<string> {
+    try {
+      const deletedItem = await this.companyModel.findByIdAndDelete(id);
+      if (deletedItem) {
+        return "Item excluído com sucesso.";
+      } else {
+        return "Item não encontrado.";
+      }
+    } catch (error) {
+      return "Ocorreu um erro ao excluir o item.";
+    }
   }
+  
 }
