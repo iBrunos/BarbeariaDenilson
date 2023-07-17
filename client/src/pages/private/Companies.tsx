@@ -6,10 +6,12 @@ import usePageTitle from '../../hooks/UsePageTitle';
 const Pets: React.FC = () => {
   return (
     <>
-      {usePageTitle("Empresas| Genious")}
-        <Header/>
-        <main className=''><SignCompanyTable /></main>
-        <Footer/>
+      {usePageTitle("Empresas | Genious")}
+      <Header />
+      <main className=''>
+        <SignCompanyTable />
+      </main>
+      <Footer />
     </>
   );
 };

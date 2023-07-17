@@ -12,9 +12,9 @@ interface RedesSociais {
 }
 
 const options: RedesSociais[] = [
-  { value: "Instagram", label: "Instagram" },
-  { value: "Facebook", label: "Facebook" },
-  { value: "TikTok", label: "TikTok" }
+  { value: "Motion / Video", label: "Motion / Video" },
+  { value: "Arte estática", label: "Arte estática" },
+  { value: "Arte impressa", label: "Arte impressa" }
 ];
 
 interface Company {
@@ -183,17 +183,17 @@ const SignCompaniesTable: React.FC = () => {
       <section className="bg-white dark:bg-[#313131] pt-24 pb-[22%] pr-10 flex flex-col ">
         <section className="max-w-6xl pt-6 mx-auto bg-white rounded-md  dark:bg-[#313131]">
           <h2 className="text-lg font-semibold text-gray-700 capitalize dark:text-white">
-            Cadastre sua empresa
+            Pedidos de Artes
           </h2>
 
           <form onSubmit={handleSubmit}>
-            <div className="grid grid-cols-7 gap-6 mt-4 sm:grid-cols-7">
+            <div className="grid grid-cols-4 gap-6 mt-4 sm:grid-cols-7">
               <div>
                 <label
                   className="text-gray-700 dark:text-gray-200"
                   htmlFor="username"
                 >
-                  Nome
+                  Copy (Descrição)
                 </label>
                 <input
                   id="username"
@@ -211,7 +211,7 @@ const SignCompaniesTable: React.FC = () => {
                   className="text-gray-700 dark:text-gray-200"
                   htmlFor="emailAddress"
                 >
-                  CNPJ
+                  Resolução da art
                 </label>
                 <input
                   id="emailAddress"
@@ -223,63 +223,10 @@ const SignCompaniesTable: React.FC = () => {
                   required
                 />
               </div>
-
-              <div className="ml-10 w-[8rem]">
-                <label
-                  className="text-gray-700 dark:text-gray-200"
-                  htmlFor="passwordConfirmation"
-                >
-                  Cep
-                </label>
-                <input
-                  id="passwordConfirmation"
-                  type="number"
-                  className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-white dark:text-black dark:border-gray-100 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
-                  placeholder="Cep"
-                  value={cep}
-                  onChange={(e) => setCep(e.target.value)}
-                  required
-                />
-              </div>
-              <div className="ml-10 w-[8rem]">
-                <label
-                  className="text-gray-700 dark:text-gray-200"
-                  htmlFor="passwordConfirmation"
-                >
-                  Estado
-                </label>
-                <input
-                  id="passwordConfirmation"
-                  type="text"
-                  className="block w-full px-4  py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-white dark:text-black dark:border-gray-100 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
-                  placeholder="Estado"
-                  value={state}
-                  onChange={(e) => setState(e.target.value)}
-                  required
-                />
-              </div>
-
-
-              <div className="ml-10 w-[8rem]">
-                <label
-                  className="text-gray-700 dark:text-gray-200"
-                  htmlFor="passwordConfirmation"
-                >
-                  Cidade
-                </label>
-                <input
-                  id="passwordConfirmation"
-                  type="text"
-                  className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-white dark:text-black dark:border-gray-100 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
-                  placeholder="Cidade"
-                  value={city}
-                  onChange={(e) => setCity(e.target.value)}
-                  required
-                />
-              </div>
+            
               <div className="ml-[2rem] w-[20rem] dark:bg-">
                 <label className="text-gray-700 dark:text-gray-200" htmlFor="password">
-                  Redes Sociais
+                Formato
                 </label>
                 <Select
                   defaultValue={[]}
@@ -292,8 +239,24 @@ const SignCompaniesTable: React.FC = () => {
                   required
                 />
               </div>
-
               <div className="ml-52 w-[8rem]">
+                <label
+                  className="text-gray-700 dark:text-gray-200"
+                  htmlFor="passwordConfirmation"
+                >
+                  Data de entrega
+                </label>
+                <input
+                  id="passwordConfirmation"
+                  type="number"
+                  className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-white dark:text-black dark:border-gray-100 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                  placeholder="Cep"
+                  value={cep}
+                  onChange={(e) => setCep(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="ml-48 w-[8rem]">
                 <button type="submit" className="px-8 py-2.5 mt-8 leading-5 text-white transition-colors duration-300 transform bg-green-700 rounded-md hover:bg-green-600 focus:outline-none focus:bg-gray-600">
                   Salvar
                 </button>
@@ -519,6 +482,11 @@ const SignCompaniesTable: React.FC = () => {
             </a>
           </div>
         </section>
+
+
+
+
+        
       </section>
     </>
   );

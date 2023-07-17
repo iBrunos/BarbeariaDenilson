@@ -1,4 +1,5 @@
 import Header from '../../components/header/PrivateHeader';
+import SignServiceTable from '../../components/signServiceTable/SignServiceTable';
 import Footer from '../../components/footer/Footer'
 import usePageTitle from '../../hooks/UsePageTitle';
 
@@ -6,10 +7,10 @@ function Services() {
 
   return (
     <>
-    {usePageTitle("Genious World | Serviços")}
+    {usePageTitle("Serviços | Genious")}
       <Header />
-      <main className='mt-4 py-20'>
-        
+      <main className=''>
+      <SignServiceTable/>
       </main>
       <Footer />
     </>

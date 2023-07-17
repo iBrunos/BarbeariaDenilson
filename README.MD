@@ -12,6 +12,10 @@ Barra de progressão do pedido (pensar em como fazer)
 # Cep - chave primaria
 # Estado
 # Cidade
+
+
+
+
 ## Tela de pedidos será um formulario de envio de pedidos
 # Copy (descrição do post)
 # Resolução da art (vai ser opções pré definidas e campos editaveis)(não limitado)
