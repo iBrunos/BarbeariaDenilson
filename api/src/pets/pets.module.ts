@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { CompanyController } from './company.controller';
-import { CompaniesService } from './company.service';
+import { PetsController } from './pets.controller';
+import { PetsService } from './pets.service';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Companieschema } from './schemas/company.schemas';
+import { PetSchema } from './schemas/pet.schemas';
 import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
 import { ConfigService } from '@nestjs/config';
@@ -22,10 +22,10 @@ import { JwtStrategy } from './jwt.strategy';
         };
       },
     }),
-    MongooseModule.forFeature([{ name: 'Company', schema: Companieschema }]),
+    MongooseModule.forFeature([{ name: 'Pet', schema: PetSchema }]),
   ],
-  controllers: [CompanyController],
-  providers: [CompaniesService, JwtStrategy],
+  controllers: [PetsController],
+  providers: [PetsService, JwtStrategy],
   exports: [JwtStrategy, PassportModule],
 })
-export class CompanyModule {}
+export class PetModule {}

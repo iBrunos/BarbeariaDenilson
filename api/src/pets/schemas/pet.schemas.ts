@@ -3,24 +3,21 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 @Schema({
   timestamps: true,
 })
-export class Company {
+export class Pet {
   @Prop()
   name: string;
 
   @Prop()
-  cnpj: string;
+  age: string;
 
   @Prop()
-  social_network: string;
+  species: string;
 
   @Prop()
-  cep: string;
+  breed: string;
 
   @Prop()
-  state: string;
-
-  @Prop()
-  city: string;
+  gender: string;
 
   @Prop()
   ownerId: string;
@@ -29,4 +26,4 @@ export class Company {
   ownerName: string;
 }
 
-export const Companieschema = SchemaFactory.createForClass(Company);
+export const PetSchema = SchemaFactory.createForClass(Pet);

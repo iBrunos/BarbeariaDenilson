@@ -7,23 +7,20 @@ export class SignUpDto {
 
   @IsNotEmpty()
   @IsString()
-  readonly cnpj: string;
+  readonly age: string;
 
   @IsNotEmpty()
   @IsString()
-  readonly social_network: string;
+  readonly species: string;
 
   @IsNotEmpty()
   @IsString()
-  readonly cep: string;
+  readonly breed: string;
 
   @IsString()
-  readonly state: string;
+  readonly gender: string;
 
   @IsString()
-  readonly city: string;
-  
-  @IsNotEmpty()
   readonly ownerId: string;
 
   @IsString()
